@@ -35,8 +35,6 @@ jobs:
         run: python pgn2png.py
       - name: remote url
         run: git remote set-url origin https://github.com/millawell/chess-mar4058
-      - name: switching from HTTPS to SSH
-        run: git remote set-url origin ${{ secrets.ssh }}
       - name: commit
         run: git commit -m "new board position"
       - name: push
