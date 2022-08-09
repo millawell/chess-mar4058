@@ -40,7 +40,7 @@ jobs:
       - name: remote url
         run: git remote set-url origin https://github.com/millawell/chess-mar4058
       - name: commit
-        run: git commit -m "new board position"
+        run: git commit -am "new board position"
       - name: push
         run: git push origin main
         
