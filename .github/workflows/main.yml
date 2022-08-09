@@ -33,6 +33,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: render board
         run: python pgn2png.py
+      - name: git identity1
+        run: git config --global user.email "action@github.action"
+      - name: git identity2
+        run: git config --global user.name "gh-action"
       - name: remote url
         run: git remote set-url origin https://github.com/millawell/chess-mar4058
       - name: commit
