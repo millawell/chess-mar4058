@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+
+      - name: requirements
+        run: pip install chess
       # Runs a single command using the runners shell
       - name: render board
         run: python pgn2png.py
