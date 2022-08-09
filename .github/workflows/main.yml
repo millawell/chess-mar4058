@@ -25,6 +25,22 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+
+      - name: requirements chess
+        run: pip install chess
+      - name: requirements cairo
+        run: pip install cairosvg
       # Runs a single command using the runners shell
       - name: render board
         run: python pgn2png.py
+      - name: git identity1
+        run: git config --global user.email "action@github.action"
+      - name: git identity2
+        run: git config --global user.name "gh-action"
+      - name: remote url
+        run: git remote set-url origin https://github.com/millawell/chess-mar4058
+      - name: commit
+        run: git commit -m "new board position"
+      - name: push
+        run: git push origin main
+        
