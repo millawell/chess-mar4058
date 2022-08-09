@@ -28,6 +28,7 @@ jobs:
 
       - name: requirements
         run: pip install chess
+        run: pip install cairosvg
       # Runs a single command using the runners shell
       - name: render board
         run: python pgn2png.py
